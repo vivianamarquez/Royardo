@@ -46,12 +46,12 @@ class listener(StreamListener):
                 pass
                 
             else:
-                if reply is None:
-                    pass
-
-                else:
-                    reply = f"@{user} {reply}"
-                    api.update_status("DANI, soy un bot, soy un fan. Mira este video: https://www.youtube.com/watch?v=xcsgZWe4zxA&ab_channel=vivmarquez", in_reply_to_status_id = tweet_id)
+                num = random.randrange(10000)
+                reply = f"@vivmarquez DANIII, soy un bot, soy un fan 🤖🤖🤖 Para parar este tweet, porfa mira este video: https://www.youtube.com/watch?v=xcsgZWe4zxA&ab_channel=vivmarquez [{num}]"
+                print(tweet_id, tweet)
+                print(reply)
+                print()
+                api.update_status(reply, in_reply_to_status_id = tweet_id)
 
         except:
             print("badluck")
